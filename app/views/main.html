@@ -1,0 +1,69 @@
+<div class="jumbotron">
+    <h1 class="text-center">Jeyni Home App</h1>
+    <div class="row content-wrapper">
+        
+        <div class="col-xs-12 text-center">
+            <h2 class="text-center">test api call POST</h2>
+            <form>
+                <div class="row">
+                    <div class="col-xs-6 text-left">
+                        <span>Car's name: </span>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <input ng-model="carPostRequest.name" type="text">
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <span>Owner car's name: </span>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <input ng-model="carPostRequest.ownerCarName" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-offset-4"></div>
+                    <div class="col-xs-4">
+                        <button ng-click="submitRequest()">SUBMIT</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 error">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <div class="col-xs-12 text-center">
+            <h2 class="text-center">test api call GET</h2>
+            <div class="row">
+                <div class="col-xs-3 text-left">
+                    <span>Car's name: </span>
+                </div>
+                <div class="col-xs-8">
+                    <div class="row">
+                        <div class="col-xs-4 text-left">id:</div>
+                        <div class="col-xs-8 text-left"> {{::carGetResquest.id}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 text-left">name:</div>
+                        <div class="col-xs-8 text-left"> {{::carGetResquest.name}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 text-left">owner name:</div>
+                        <div class="col-xs-8 text-left"> {{::carGetResquest.ownerName}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4 text-left">number of seats:</div>
+                        <div class="col-xs-8 text-left"> {{::carGetResquest.seatNumber}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-4"></div>
+                <div class="col-xs-4">
+                    <button ng-click="getRequest()">GET</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

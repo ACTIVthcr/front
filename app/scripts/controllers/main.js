@@ -9,6 +9,15 @@
  */
 angular.module('jeyniFrontApp')
   .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
+    var deleteStyle = function (element) {
+        var childElements = element.childNodes;
+        var i;
+        for (i = 0; i < childElements.length; i++) {
+            if (childElements[i].nodeName === 'STYLE') {
+                childElements[i].parentNode.removeChild(childElements[i]);
+            }
+        }
+    };
     var carGetRequest = {
         'id': '',
         'name': '',
@@ -37,6 +46,10 @@ angular.module('jeyniFrontApp')
             console.log('submitRequest error: ',error);
             var errorElements = document.getElementsByClassName('error');
             errorElements[0].innerHTML = error.data;
+            deleteStyle(errorElements[0]);
+            errorElements[0].style.borderColor = 'black';
+            errorElements[0].style.borderStyle = 'solid';
+            errorElements[0].style.borderWidth = '1px';
         }).finally(function(){
             console.log('submitRequest end');
         });

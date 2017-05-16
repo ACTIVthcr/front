@@ -1,7 +1,6 @@
 <div class="jumbotron">
     <h1 class="text-center">Jeyni Home App</h1>
     <div class="row content-wrapper">
-        
         <div class="col-xs-12 text-center">
             <h2 class="text-center">test api call POST</h2>
             <form>
@@ -16,7 +15,13 @@
                         <span>Owner car's name: </span>
                     </div>
                     <div class="col-xs-6 text-left">
-                        <input ng-model="carPostRequest.ownerCarName" type="text">
+                        <input ng-model="carPostRequest.ownerName" type="text">
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <span>Number of seat: </span>
+                    </div>
+                    <div class="col-xs-6 text-left">
+                        <input ng-model="carPostRequest.seatNumber" type="text">
                     </div>
                 </div>
                 <div class="row">
@@ -31,7 +36,6 @@
                 </div>
             </form>
         </div>
-        
         <div class="col-xs-12 text-center">
             <h2 class="text-center">test api call GET</h2>
             <div class="row">
@@ -64,6 +68,6 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
